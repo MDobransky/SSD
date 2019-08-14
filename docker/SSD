@@ -1,0 +1,7 @@
+from pytorch:v1.0
+
+RUN mkdir /home/torch_user/SSD
+ADD --chown=torch_user:torch_user . /home/torch_user/SSD/
+RUN cd /home/torch_user/SSD/
+RUN pip3 install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+
